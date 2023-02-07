@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="&#34;CAJA DE CHAPLIN 2&#34;" comment="" type="program" style="nice">
+ <children>
+
+<instruction text="INICIO" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="&#34;Escribir &#34;&#34;¿Cuántas ventas superiores a 200€ has realizado?&#34;&#34;&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="&#34;Leer categoriaUno&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="&#34;Escribir &#34;&#34;¿Cuántas ventas entre 101€ y 200€ has realizado?&#34;&#34;&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="&#34;Leer categoriaDos&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="&#34;Escribir &#34;&#34;¿Cuántas ventas menores de 100€ has realizado?&#34;&#34;&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="&#34;Leer categoriaTres&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+ </children>
+</root>

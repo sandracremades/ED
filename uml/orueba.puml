@@ -1,0 +1,19 @@
+@startuml
+abstract class Compañia
+abstract class Ruta
+abstract class Bus
+abstract class Personas
+abstract class Empleados
+abstract class Pasajeros
+class Reservas
+
+Compañia -- Ruta
+Compañia -- Empleados
+Compañia -- Pasajeros
+Ruta -- Bus
+Ruta -- Reservas
+Bus -- Reservas
+Persona -- Empleados
+Persona -- Pasajeros
+@enduml
+

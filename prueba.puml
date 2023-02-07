@@ -1,0 +1,52 @@
+@startuml ejercicio1
+
+class CompaniaAutobuses
+- nombre: string
+- trayectos: List[Trayecto]
+- autobuses: List[Autobus]
+- empleados: List[Empleado]
+- pasajeros: List[Pasajero]
+- reservas: List[Reserva]
+
++ altaTrayecto(trayecto: Trayecto): void
++ altaAutobus(autobus: Autobus): void
++ altaEmpleado(empleado: Empleado): void
++ altaPasajero(pasajero: Pasajero): void
++ altaReserva(reserva: Reserva): void
+
+class Trayecto
+- origen: string
+- destino: string
+- numero: int
+- fechaSalida: string
+- horaSalida: string
+- fechaLlegada: string
+- horaLlegada: string
+
+class Autobus
+- modelo: string
+- matricula: string
+- capacidadMaxima: int
+
+class Empleado
+- nombre: string
+- DNI: string
+- direccion: string
+- telefono: int
+- edad: int
+- numSeguridadSocial: int
+- antiguedad: int
+
+class Pasajero
+- nombre: string
+- DNI: string
+- direccion: string
+- telefono: int
+- edad: int
+- codigoCliente: int
+
+class Reserva
+- precio: float
+- numAsiento: int
+
+@enduml 

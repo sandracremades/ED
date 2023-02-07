@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="&#34;CAJA DE CHAPLIN&#34;" comment="" type="sub" style="nice">
+ <children>
+
+<instruction text="INICIO" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="&#34;Escribir &#34;&#34;¿Cuántas personas sois?&#34;&#34;&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="&#34;Leer personas&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<alternative text="personas&#62;200" comment="" color="FFFFFF">
+ <qTrue>
+
+<alternative text="personas&#62;300" comment="" color="FFFFFF">
+ <qTrue>
+
+<instruction text="total=personas*75" comment="" color="FFFFFF" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+<instruction text="total=personas*85" comment="" color="FFFFFF" rotated="0"></instruction>
+ </qFalse>
+</alternative>
+ </qTrue>
+ <qFalse>
+
+<instruction text="total=personas*95" comment="" color="FFFFFF" rotated="0"></instruction>
+ </qFalse>
+</alternative>
+<instruction text="&#34;Escribir &#34;&#34;Su presupuesto es igual a &#34;&#34;+total&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="FIN" comment="" color="FFFFFF" rotated="0"></instruction>
+ </children>
+</root>

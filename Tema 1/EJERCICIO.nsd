@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root text="&#34;MAYOR O MENOR&#34;" comment="" type="program" style="nice">
+ <children>
+
+<instruction text="INICIO" comment="" color="FFFFFF" rotated="0"></instruction>
+<instruction text="&#34;ESCRIBIR &#34;&#34;DAME UN NUMERO&#34;&#34;&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+<call text="&#34;LEER numeroUno&#34;" comment="" color="FFFFFF"></call>
+<call text="&#34;ESCRIBIR &#34;&#34;DIME OTRO NÚMERO&#34;&#34;&#34;" comment="" color="FFFFFF"></call>
+<call text="&#34;LEER numeroDos&#34;" comment="" color="FFFFFF"></call>
+<alternative text="numeroUno&#60;numeroDos" comment="" color="FFFFFF">
+ <qTrue>
+
+<instruction text="&#34;ESCRIBIR &#34;&#34;numeroDos es mayor que numeroUno&#34;&#34;&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+ </qTrue>
+ <qFalse>
+
+<instruction text="&#34;ESCRIBIR &#34;&#34;numeroUno es mayor que numeroDos&#34;&#34;&#34;" comment="" color="FFFFFF" rotated="0"></instruction>
+ </qFalse>
+</alternative>
+<instruction text="FIN" comment="" color="FFFFFF" rotated="0"></instruction>
+ </children>
+</root>
