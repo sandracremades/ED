@@ -1,36 +1,50 @@
 @startuml VentaOnline
 skinparam classAttributeIconSize 0
-class Usuario{
+class Usuario
+{
     -nombre : string 
     -id : int
     -direccion : string
     -telefono : int
+    -correo : string
 }
-class Cliente{
+class Cliente
+{
     -numCarros : int
     -numPedidos : int
+    -pedido : Pedidos
+    -infoCarro : CarroCompras
     +AñadirProductoCarro() : void
     +EliminarProductoCarro() : void
+    +Comprar()
 }
-class Administradores{
+class Administradores
+{
     
     +ModificarProducto() : void
     +CrearProducto() : void
+    +BorrarProducto() : void
 }
-class Compras{
-
+class CarroCompras
+{
+    -producto : Productos
 }
-class Pedidos{
-    
+class Pedidos
+{
+    -numPedido : int
+    -InfoEnvio : string
+    -producto : Productos
 }
-class Productos{
+class Productos
+{
     -precio : int 
     -cantidades : int 
 }
 
 Usuario <|--Cliente
 Usuario <|--Administradores
-Cliente <|--Pedidos 
-Pedidos <|--Productos
-Cliente <|--Compras
+Cliente *-- Pedidos 
+Pedidos *-- Productos
+Cliente *-- CarroCompras
+CarroCompras *-- Productos
 @enduml
