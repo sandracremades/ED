@@ -1,6 +1,6 @@
 @startuml VentaOnline
 skinparam classAttributeIconSize 0
-class Usuario
+abstract Usuario
 {
     -nombre : string 
     -id : int
@@ -20,7 +20,6 @@ class Cliente
 }
 class Administradores
 {
-    
     +ModificarProducto() : void
     +CrearProducto() : void
     +BorrarProducto() : void
@@ -40,11 +39,15 @@ class Productos
     -precio : int 
     -cantidades : int 
 }
+class DetallePedido
+{
+
+}
 
 Usuario <|--Cliente
 Usuario <|--Administradores
-Cliente *-- Pedidos 
-Pedidos *-- Productos
-Cliente *-- CarroCompras
-CarroCompras *-- Productos
+Cliente o-- Pedidos 
+Cliente o-- CarroCompras
+DetallePedido o-- Productos
+Pedidos o-- DetallePedido
 @enduml
