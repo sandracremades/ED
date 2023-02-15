@@ -1,0 +1,49 @@
+@startuml Municipios
+skinparam classAttributeIconSize 0
+class Municipio
+{
+    -nombre : string
+    -provincia : string
+    -comunidadAutonoma : string
+    +Municipio()
+}
+class Inmueble
+{
+    -codigoReferencia : string[]
+    -descripcion : string
+    -precioVentas : int
+    +Inmueble()
+}
+class Casas
+{
+    -numHabitaciones : int 
+    -superficie : int
+    -otrasCaracteristicas : string
+    +Casas()
+}
+class Locales
+{
+    -superficie : int
+    -otrasCaracteristicas : string
+    +Locales()
+}
+class Garaje
+{
+    -direccion : string
+    -plazaGaraje : int
+    +Garaje()
+}
+class Program
+{
+    +AñadirInmueble()
+    +ListarInmueble()
+    +EliminarInmueble()
+    +BuscarInmueble()
+    +GuardarInmueble()
+}
+Municipio <|-- Inmueble
+Inmueble o-- Casas
+Inmueble o-- Locales
+Inmueble o-- Garaje
+Program +-- Inmueble
+@enduml
