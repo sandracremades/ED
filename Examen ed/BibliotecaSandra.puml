@@ -1,0 +1,77 @@
+@startuml BibliotecaSandra
+skinparam classAttributeIconSize 0
+abstract class Biblioteca{
+
+}
+class Libro{
+    -numCopias : int 
+}
+class CopiasLibros{
+    -nombre : string 
+    -tipo : Tipo 
+    -editorial : string
+    -año : int 
+    -autor : string
+}
+enum Tipo{
+    novela
+    teatro
+    poesia
+    ensayo
+}
+enum Identificador{
+    enBiblioteca
+    prestada
+    retraso 
+    reparacion
+}
+class Autor{
+    -nombre : string
+    -nacionalidad : int 
+    -fechaNacimiento : string
+}
+class Socio{
+    -nombre : string
+    -direccionPostal : string
+    -direccionElectronica : string
+    -telefono : int 
+    -dni : string 
+
+    +ImprimeDatosPrestamo(fechaIncioPrestamo : string, fechaDevolucionPrestamo : string, multa : string) : string
+}
+class Prestamo{
+    -fechaIncioPrestamo : string 
+    -fechaDevolucionPrestamo : string 
+    -multa : string
+    
+    +Retraso(fechaIncioPrestamo : string, fechaDevolucionPrestamo : string) : string
+}
+class Empleados{
+    -nombre : string
+    -direccionPostal : string
+    -direccionElectronica : string
+    -telefono : int 
+    -dni : string 
+}
+enum CargoEmpleado{
+    secretario 
+    mantenimiento
+}
+class Secciones{
+    -nombre : string
+    -pasillos : int[]
+    -copiasAlmacenadas : int
+}
+Biblioteca *-- Secciones
+CopiasLibros o-- Tipo
+CopiasLibros *-- Identificador
+Empleados o-- CargoEmpleado
+Biblioteca <|-- Socio
+Biblioteca *-- Empleados
+Socio *-- Prestamo 
+Biblioteca o-- Libro
+Libro o-- Autor 
+Libro o--CopiasLibros
+
+
+@enduml

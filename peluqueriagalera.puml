@@ -1,0 +1,31 @@
+@startuml PeluqueriaGalera
+(recibir servicio)
+(calcular costes consumidos)
+(modificar cantidad de productos consumidos)
+(realizar descuento)
+(generar aviso)
+(comprobar stock)
+(mostrar aviso stock)
+
+:cliente:
+:peluquero: --> (indicar productos consumidos)
+:peluquero: --> (gestion productos)
+:peluquero: --> (gestion de clientes)
+:Sistema: --> (calcular precio de servicios)
+(gestion productos)<|--(altas de producto)
+(gestion productos)<|--(bajas de producto)
+(gestion productos)<|--(modificaciones de producto)
+(gestion productos)<|--(actualizar stock)
+
+(gestion de clientes)<|--(altas de clientes)
+(gestion de clientes)<|--(bajas de clientes)
+(gestion de clientes)<|--(modificaciones de clientes)
+
+
+(indicar productos consumidos) .> (corte) : extends
+(indicar productos consumidos) .> (lavado) : extends
+(indicar productos consumidos) .> (tinte) : extends
+(indicar productos consumidos) .> (secado) : extends
+
+
+@enduml

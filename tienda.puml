@@ -1,0 +1,15 @@
+@startuml
+:vendedor:
+left to right direction
+rectangle tienda{
+vendedor -- (Hacer pedido)
+(Hacer pedido) .> (Obtener datos cliente) : include
+(Hacer pedido) .> (Pedir producto) : include
+(Hacer pedido) .> (Pagar) : include
+(Pagar)<|--(Tarjeta)
+(Pagar)<|--(Efectivo)
+(Hacer pedido) .> (Solicitar catalogo) : extends
+}
+
+
+@enduml

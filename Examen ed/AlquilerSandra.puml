@@ -1,0 +1,51 @@
+@startuml AlquilerSandra
+skinparam classAttributeIconSize 0
+abstract class Reserva{}
+
+class Cliente{
+    -dni : string
+    -nombre : string
+    -direccion : string
+    -telefono : int
+}
+class DetalleReserva{
+    -fechaInicio : string
+    -fechaFinal : string 
+    -precioAlquiler : int
+    -litrosGasolina : int
+    -precioFinal : int
+    -indicadorEntrega : string
+}
+class Garaje{
+    -direccionGaraje : int
+    -personaContacto : string
+}
+class Vehiculo{
+    -matricula : string 
+    -modelo : string
+    -color : string
+    -marca : string
+}
+class Coche{
+    -etiquetaMedioambiental : string
+}
+class Furgoneta{
+    -numPlazas : int
+    -cargaMaxima : int
+}
+class Agencia{
+    -responsable : string
+    -telefonoIncidencias : int
+}
+
+Reserva <|-- DetalleReserva
+Reserva o-- Vehiculo
+Reserva o-- Agencia
+Reserva o-- Cliente 
+Vehiculo o-- Coche 
+Vehiculo o-- Furgoneta  
+Vehiculo o-- Garaje
+
+
+
+@enduml
